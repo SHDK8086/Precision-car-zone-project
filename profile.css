@@ -1,0 +1,79 @@
+body {
+  background-color: #d3d3d3; /* Light grey background */
+  color: white;
+}
+
+.profile-container {
+  border-radius: 20px;
+  background-color: #808080; /* Grey */
+}
+
+.colum-1 {
+  background-color: #808080; /* Grey */
+  color: white;
+  border-radius: 5px 0 0 5px;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+}
+
+.colum-2 {
+  background-color: #808080; /* Grey */
+  color: white;
+  border-left: black solid 1px;
+  border-right: black solid 1px;
+}
+
+.colum-3 {
+  background-color: #808080; /* Grey */
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+.menu-link {
+  display: block;
+  padding: 15px 0;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  padding-left: 10px;
+}
+
+.menu-link:hover {
+  background-color: black;
+}
+
+.labels,
+.fname,
+.mnumber,
+.address,
+.email {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profile-button {
+  background: rgb(99, 39, 120);
+  box-shadow: none;
+  border: none;
+}
+
+.profile-button:hover,
+.profile-button:focus,
+.profile-button:active {
+  background: #682773;
+  box-shadow: none;
+}
+
+.add-experience:hover {
+  background: #ba68c8;
+  color: #fff;
+  cursor: pointer;
+  border: solid 1px #ba68c8;
+}
