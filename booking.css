@@ -1,0 +1,310 @@
+/* Global Styles */
+:root {
+    --primary-color: #3674B5;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://images.unsplash.com/photo-1629896428945-349a9a86e6ba?q=80&w=2948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ffffff;
+    border-radius: 0.25rem;
+}
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Styles for Basic items's Next Button. */
+
+.width-50 {
+    width: 50%;
+}
+.ml-auto {
+    margin-left: auto;
+}
+/* Styles for h2 & Credit Link. */
+.text-center, .text-center a {
+    text-decoration: none;
+    text-align: center;
+}
+.text-center a {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Styles for Progress Bar */
+.progressbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+    margin: 2rem 0 4rem;
+}
+.progressbar::before, .progress {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: -1;
+}
+.progress {
+    background-color: var(--primary-color);
+    width: 0%;
+    transition: 0.3s;
+    z-index: -1;
+}
+
+.progress-step {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    background-color: #dcdcdc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-step::before {
+    counter-increment: step;
+    content: counter(step);
+}
+.progress-step::after {
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    font-size: 0.85rem;
+    color: #fefefe;
+}
+.progress-step-active {
+    background-color: var(--primary-color);
+    color: #f3f3f3;
+}
+
+/* Styles for Form. */
+.form {
+    width: 30rem;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Semi-transparent border */
+    border-radius: 15px; /* Rounded corners for the glass effect */
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    backdrop-filter: blur(10px); /* Blur effect for the glass look */
+    overflow: hidden; /* Ensures child elements don't overflow the rounded corners */
+}
+
+/* Styles for input group. */
+.input-group {
+    margin: 2rem 0;
+    
+}
+
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-step {
+    display: none;
+    transform-origin: top;
+    animation: animate 0.5s;
+}
+@keyframes animate {
+    from {
+        transform: scale(1, 0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+}
+.form-step-active {
+    display: block;
+}
+
+/* Styles for Next and Back Button. */
+.btns-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.btn{
+    padding:  0.75rem;
+    display: block;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+}
+
+
+/* Social Credit Styles */
+.social_media_div{
+    position: fixed;
+    left: 0;
+    bottom: 20px;
+}
+.social_media_div li{
+    list-style: none;
+    margin-bottom: 20px;
+    background-color: #fff;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    transition: all 0.4s;
+    font-size: 20px;
+}
+.social_media_div li a {
+    text-decoration: none;
+}
+.social_media_div li a i {
+    color: black;
+    width: 2.1875rem;
+    height: 2.1875rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0px 0px 10px 10px rgba(245, 244, 244, 0.12);
+}
+  
+.social_media_div li:hover{
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+/* Responsive Style */
+@media (max-width: 850px) {
+    .form {
+        width: 100vw;
+    }
+}
+
+
+/* Adjusted Form Size */
+.form {
+    width: 25rem; /* Reduced width */
+    padding: 2rem; /* Less padding */
+    border-radius: 1rem; /* Slightly smaller border-radius */
+}
+
+/* Reduce spacing between input groups */
+.input-group {
+    margin: 1rem 0; /* Smaller margin */
+}
+
+/* Reduce input field padding */
+.input-group input,
+.input-group select {
+    padding: 0.5rem;
+    font-size: 14px; /* Smaller font */
+}
+
+/* Reduce button padding and spacing */
+.btns-group {
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.5rem;
+    font-size: 14px; /* Slightly smaller text */
+}
+
+/* Reduce progress bar step size */
+.progress-step {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 14px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    .form {
+        width: 90vw;
+    }
+}
+
+
+/* Terms & Conditions Styling */
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.terms input {
+    width: auto;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.terms label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.terms-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.terms-link:hover {
+    text-decoration: underline;
+}
+
+/* Disable Register Button Initially */
+#registerBtn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
