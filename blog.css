@@ -1,0 +1,95 @@
+body {
+  background-color: #808080;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+}
+
+.blog-grid {
+  position: relative;
+  box-shadow: 0 1rem 1.75rem 0 rgba(45, 55, 75, 0.1);
+  height: 100%;
+  border: 0.0625rem solid rgba(220, 224, 229, 0.6);
+  transition: all 0.2s ease-in-out;
+}
+
+.blog-grid img {
+  width: 100%;
+}
+
+.blog-grid-text {
+  position: relative;
+}
+
+.blog-grid-text h4 {
+  line-height: normal;
+  margin-bottom: 15px;
+}
+
+.blog-grid-text .meta-style2 {
+  border-top: 1px dashed #cee1f8;
+  padding-top: 15px;
+}
+
+.blog-grid-text p {
+  font-weight: 400;
+  padding: 0;
+}
+
+.pagination a {
+  float: left;
+  padding: 0 18px;
+  line-height: 40px;
+  text-decoration: none;
+  border: 1px solid #dbdbdb;
+  border-left-width: 0;
+  background: #000000;
+  color: #ffffff;
+  transition: color 0.2s ease-in-out;
+}
+
+.pagination a:hover {
+  background-color: #f7fc00;
+  color: #000000;
+}
+
+.pagination .active a {
+  background-color: #f7f7f7;
+  color: #000000;
+}
+
+.featured-hero {
+  width: 100%;
+  height: 425px;
+}
+
+.blog-post {
+  display: flex;
+  align-items: center;
+}
+
+.blog-post img {
+  width: 30%;
+  height: auto;
+  margin-right: 15px;
+}
+
+.blog-info {
+  flex: 1;
+}
+
+footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer a {
+  color: #ffffff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #f7fc00;
+}
